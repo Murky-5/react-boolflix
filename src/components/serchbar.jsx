@@ -5,20 +5,22 @@ const searched = createContext();
 
 const BeSearched = ({ children }) => {
   const src = (a, b) => `https://image.tmdb.org/t/p/w500${a[b]}`;
-  const [search, setsearch] = useState("a");
+  const [search, setsearch] = useState("caraibi");
 
   const [res, setres] = useState([]);
 
   useEffect(
     axios
       .get(
-        `https://api.themoviedb.org/3/search/movie?api_key=e99307154c6dfb0b4750f6603256716d&query=${search}`
+        "https://api.themoviedb.org/3/search/movie?api_key=e99307154c6dfb0b4750f6603256716d&query=" +
+          String(search)
       )
       .then(({ data }) => {
         setres(data.results), [search];
       })
   );
 
+  console.log(res);
   return (
     <searched.Provider value={(search, setsearch)}>
       <div className="container">

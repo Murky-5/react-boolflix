@@ -1,7 +1,9 @@
 import Navbar from "../components/navbar";
 
 export default () => {
-  <>
-    <Navbar />
-  </>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };
