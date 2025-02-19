@@ -12,7 +12,7 @@ export default () => {
         <BrowserRouter>
           <Routes>
             <Route element={<Default />}>
-              <Route index element={<Default />} />
+              <Route index element={<Main />} />
             </Route>
           </Routes>
         </BrowserRouter>

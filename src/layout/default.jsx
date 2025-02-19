@@ -5,7 +5,7 @@ import Main from "../pages/main";
 export default () => (
   <>
     <Header />
-    <Main />
     <Outlet />
+    <Main />
   </>
 );
